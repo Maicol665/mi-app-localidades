@@ -7,30 +7,54 @@ Aplicación web fullstack desarrollada con Next.js 16 y MySQL, que permite gesti
 
 Este sistema centraliza la administración de datos sociales relacionados con beneficiarios, incluyendo su localidad, institución, modalidad de atención, grupos étnicos, condición de discapacidad, clasificación Sisbén, entre otros. Está diseñado para consulta, registro, actualización y eliminación de información desde una interfaz web sencilla y navegable.
 
-📁 Estructura del Proyecto
+# 📁 Estructura del Proyecto
 
-mi-app-localidades/
+| Carpeta / Archivo | Descripción |
+|-------------------|-------------|
+| `app/page.js` | Página de inicio con menú principal. |
+| `app/layout.js` | Layout global con barra de navegación. |
+| `app/[modulo]/page.js` | Vista de cada módulo (localidades, beneficiarios, etc.). |
+| `app/api/[modulo]/route.js` | Endpoints REST por módulo (`GET`, `POST`, `PUT`, `DELETE`). |
+| `models/` | Modelos de acceso a datos; contiene las consultas MySQL por entidad. |
+| `db/connection.js` | Pool de conexiones a la base de datos MySQL. |
+| `public/` | Archivos estáticos del proyecto. |
+
+## 📦 Módulos Disponibles
+
+Los siguientes módulos cuentan con vistas y endpoints API:
+
+- `localidades`
+- `beneficiarios`
+- `instituciones`
+- `modalidades`
+- `discapacidades`
+- `sexos`
+- `grupos-etnicos`
+- `nucleos`
+- `sectores`
+- `grupos-sisben`
+
+## 🗂️ Estructura General
+
+```text
+proyecto/
 ├── app/
-│   ├── page.js                  # Página de inicio con menú principal
-│   ├── layout.js                # Layout global con barra de navegación
-│   ├── api/                     # Endpoints de la API REST (Route Handlers)
-│   │   ├── localidades/
-│   │   ├── beneficiarios/
-│   │   ├── instituciones/
-│   │   ├── modalidades/
-│   │   ├── discapacidades/
-│   │   ├── sexos/
-│   │   ├── grupos-etnicos/
-│   │   ├── nucleos/
-│   │   ├── sectores/
-│   │   └── grupos-sisben/
-│   └── [modulo]/page.js         # Vistas por módulo
-├── models/                      # Modelos de acceso a datos (MySQL)
+│   ├── page.js
+│   ├── layout.js
+│   ├── localidades/
+│   ├── beneficiarios/
+│   ├── instituciones/
+│   └── api/
+│       ├── localidades/
+│       ├── beneficiarios/
+│       ├── instituciones/
+│       └── ...
+├── models/
 ├── db/
-│   └── connection.js            # Pool de conexiones MySQL
-└── public/                      # Archivos estáticos
-
-⚙️ Módulos del Sistema
+│   └── connection.js
+├── public/
+└── README.md
+```
 
 El sistema está organizado en cuatro tipos de operaciones:
 
