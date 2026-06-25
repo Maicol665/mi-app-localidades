@@ -86,3 +86,6 @@ Núcleos de Conocimiento — Creación de núcleos académicos
 
 Sectores / Zona — Eliminación de sectores geográficos
 Grupos Sisbén — Gestión de grupos de clasificación Sisbén
+
+<img width="1589" height="788" alt="image" src="https://github.com/user-attachments/assets/f9e74b40-bd74-4953-ab5d-43e261732cca" />
+
