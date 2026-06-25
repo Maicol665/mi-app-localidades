@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🗺️ Sistema de Beneficiarios — Localidades
 
-## Getting Started
+Aplicación web fullstack desarrollada con Next.js 16 y MySQL, que permite gestionar información social y geográfica de beneficiarios a través de una interfaz organizada por operaciones CRUD.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📋 Descripción
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este sistema centraliza la administración de datos sociales relacionados con beneficiarios, incluyendo su localidad, institución, modalidad de atención, grupos étnicos, condición de discapacidad, clasificación Sisbén, entre otros. Está diseñado para consulta, registro, actualización y eliminación de información desde una interfaz web sencilla y navegable.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+📁 Estructura del Proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+mi-app-localidades/
+├── app/
+│   ├── page.js                  # Página de inicio con menú principal
+│   ├── layout.js                # Layout global con barra de navegación
+│   ├── api/                     # Endpoints de la API REST (Route Handlers)
+│   │   ├── localidades/
+│   │   ├── beneficiarios/
+│   │   ├── instituciones/
+│   │   ├── modalidades/
+│   │   ├── discapacidades/
+│   │   ├── sexos/
+│   │   ├── grupos-etnicos/
+│   │   ├── nucleos/
+│   │   ├── sectores/
+│   │   └── grupos-sisben/
+│   └── [modulo]/page.js         # Vistas por módulo
+├── models/                      # Modelos de acceso a datos (MySQL)
+├── db/
+│   └── connection.js            # Pool de conexiones MySQL
+└── public/                      # Archivos estáticos
 
-## Learn More
+⚙️ Módulos del Sistema
 
-To learn more about Next.js, take a look at the following resources:
+El sistema está organizado en cuatro tipos de operaciones:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔵 Consulta (GET)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Localidades — Listado y detalle de localidades
+Beneficiarios — Información de beneficiarios registrados
+Instituciones — Instituciones vinculadas al sistema
+Modalidades — Modalidades de atención disponibles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🟠 Actualización (PUT/PATCH)
+
+
+Discapacidades — Modificación de tipos de discapacidad
+Sexos — Actualización de categorías de sexo
+
+
+🟢 Inserción (POST)
+
+
+Grupos Étnicos — Registro de nuevos grupos étnicos
+Núcleos de Conocimiento — Creación de núcleos académicos
+
+
+🔴 Eliminación (DELETE)
+
+
+Sectores / Zona — Eliminación de sectores geográficos
+Grupos Sisbén — Gestión de grupos de clasificación Sisbén
