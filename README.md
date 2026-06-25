@@ -88,4 +88,5 @@ Sectores / Zona — Eliminación de sectores geográficos
 Grupos Sisbén — Gestión de grupos de clasificación Sisbén
 
 <img width="1589" height="788" alt="image" src="https://github.com/user-attachments/assets/f9e74b40-bd74-4953-ab5d-43e261732cca" />
+<img width="965" height="493" alt="image" src="https://github.com/user-attachments/assets/cbb9dbde-b070-4373-8485-f56707cf29d7" />
 
